@@ -9,7 +9,7 @@ The project is based on Avatar: Aang cartoon-serial.
 
 /users/{userld:[0-9]+} method DELETE
 
-# Postgres DB structers
+## Postgres DB structers
 
 ### Tables
 
@@ -50,3 +50,67 @@ The project is based on Avatar: Aang cartoon-serial.
 - If characters have specific bending abilities listed in the `abilities` column, you might consider creating a separate table for abilities and establishing a many-to-many relationship between `characters` and `abilities`.
 
 Feel free to adjust the table structure and relationships based on your project's specific needs.
+
+## API Endpoints
+
+### Base URL
+
+The base URL for all API endpoints is `https://your-api-domain.com`.
+
+### Characters
+
+#### `GET /api/characters`
+
+Get a list of all characters.
+
+**Response:**
+```json
+[
+  {
+    "id": 1,
+    "name": "Aang",
+    "age": 112,
+    "gender": "Male",
+    "affiliation": "Air Nomads",
+    "abilities": "Airbending, Energybending",
+    "image": "https://example.com/aang.jpg"
+  },
+  // ... other characters
+]
+```
+
+### Places
+
+#### `GET /api/places`
+
+Get a list of all places.
+
+**Response:**
+```json
+[
+  {
+    "name": "Air Temple",
+    "type": "Air Nomads",
+    "image": "https://example.com/air_temple.jpg"
+  },
+  // ... other places
+]
+```
+
+### Elements
+
+#### `GET /api/elements`
+
+Get a list of all elements.
+
+**Response:**
+```json
+[
+  {
+    "name": "Airbending",
+    "discription": "Manipulation of air currents",
+    "image": "https://example.com/airbending.jpg"
+  },
+  // ... other elements
+]
+```
